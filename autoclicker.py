@@ -52,3 +52,6 @@ def on_press(key):
     if key == exit_key:
         click_thread.exit()
         listener.stop()
+        
+with Listener(on_press = on_press) as listener:
+    listener.join()
